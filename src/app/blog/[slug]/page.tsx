@@ -4,11 +4,11 @@ import { Container } from "@/components/container";
 import { blogPosts } from "@/lib/content";
 
 export function generateStaticParams() {
-  return blogPosts.map((p) => ({ slug: p.slug }));
+  return blogPosts.map((p: (typeof blogPosts)[number]) => ({ slug: p.slug }));
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+  const post = blogPosts.find((p: (typeof blogPosts)[number]) => p.slug === params.slug);
   if (!post) notFound();
 
   return (

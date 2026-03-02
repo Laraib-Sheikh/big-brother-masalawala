@@ -111,7 +111,7 @@ export default async function Home() {
       <section className="py-12 md:py-16">
         <Container>
           <div className="grid gap-4 md:grid-cols-3">
-            {categories.map((c) => (
+            {categories.map((c: (typeof categories)[number]) => (
               <Link
                 key={c.title}
                 href={c.href}
@@ -252,7 +252,7 @@ export default async function Home() {
           </div>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {testimonials.map((t) => (
+            {testimonials.map((t: (typeof testimonials)[number]) => (
               <div
                 key={t.name}
                 className="rounded-3xl border border-border bg-card p-6"
@@ -285,7 +285,7 @@ export default async function Home() {
           </div>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {testimonials.slice(0, 3).map((t) => (
+            {testimonials.slice(0, 3).map((t: (typeof testimonials)[number]) => (
               <div
                 key={t.name}
                 className="rounded-3xl border border-border bg-card p-6"

@@ -117,7 +117,7 @@ export default function AdminNewProductPage({
           <div className="md:col-span-2">
             <label className="text-sm font-medium">Tags</label>
             <div className="mt-3 grid gap-2 sm:grid-cols-2">
-              {TAGS.map((t) => (
+              {TAGS.map((t: (typeof TAGS)[number]) => (
                 <label
                   key={t.tag}
                   className="flex items-center gap-2 rounded-2xl border border-border px-4 py-3 text-sm hover:bg-muted"

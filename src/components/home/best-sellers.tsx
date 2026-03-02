@@ -38,7 +38,7 @@ export function BestSellers({ products }: { products: Product[] }) {
       </div>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {items.map((p) => (
+        {items.map((p: Product) => (
           <ProductCard key={p.id} product={p} />
         ))}
       </div>

@@ -80,7 +80,7 @@ export default async function ProductsPage({
       ) : null}
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {filtered.map((p) => (
+        {filtered.map((p: (typeof filtered)[number]) => (
           <ProductCard key={p.id} product={p} />
         ))}
       </div>

@@ -51,7 +51,7 @@ export function MobileMenu() {
 
           <nav className="mt-6">
             <ul className="space-y-1">
-              {links.map((l) => (
+              {links.map((l: (typeof links)[number]) => (
                 <li key={l.href}>
                   <Dialog.Close asChild>
                     <Link

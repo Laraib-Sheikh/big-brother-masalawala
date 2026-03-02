@@ -14,7 +14,7 @@ export default function BlogPage() {
       </p>
 
       <div className="mt-8 grid gap-4 md:grid-cols-2">
-        {blogPosts.map((p) => (
+        {blogPosts.map((p: (typeof blogPosts)[number]) => (
           <Link
             key={p.slug}
             href={p.href}
