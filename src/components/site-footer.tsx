@@ -8,7 +8,7 @@ export function SiteFooter() {
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
             <Link href="/" className="inline-flex items-center gap-2">
-              <Image src="/logo.svg" alt="Masalay Wala" width={140} height={32} />
+              <Image src="/images/logo_masalawala.png" alt="Masalay Wala" width={140} height={32} />
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               Taste the freshness — spice up your culinary journey with Masalay

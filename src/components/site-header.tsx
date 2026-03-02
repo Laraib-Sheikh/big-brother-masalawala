@@ -24,18 +24,19 @@ export async function SiteHeader() {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
+      <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2">
         <div className="md:hidden">
           <MobileMenu />
         </div>
 
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/logo.svg"
+            src="/images/logo_masalawala.png"
             alt="Masalay Wala"
-            width={140}
-            height={32}
+            width={90}
+            height={28}
             priority
+            className="h-7 w-auto"
           />
         </Link>
 
