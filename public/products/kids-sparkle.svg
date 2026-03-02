@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a7f3d0"/>
+      <stop offset="0.5" stop-color="#bfdbfe"/>
+      <stop offset="1" stop-color="#fbcfe8"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.86"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.24"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" rx="140" fill="url(#bg)"/>
+  <g opacity="0.9">
+    <circle cx="330" cy="360" r="240" fill="#fff" fill-opacity="0.22"/>
+    <circle cx="900" cy="900" r="260" fill="#fff" fill-opacity="0.18"/>
+  </g>
+  <rect x="420" y="240" width="360" height="740" rx="92" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.5"/>
+  <rect x="520" y="170" width="160" height="84" rx="34" fill="#111827"/>
+  <rect x="470" y="420" width="260" height="320" rx="60" fill="#111827" fill-opacity="0.08"/>
+  <path d="M600 480L620 525L670 530L632 562L644 610L600 584L556 610L568 562L530 530L580 525L600 480Z" fill="#111827" fill-opacity="0.16"/>
+  <text x="452" y="575" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="28" font-weight="700" fill="#111827" opacity="0.78">SPARKLE</text>
+  <text x="470" y="615" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="18" fill="#111827" opacity="0.55">Kids Mist</text>
+</svg>
+

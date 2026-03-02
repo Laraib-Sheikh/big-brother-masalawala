@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#a7f3d0"/>
+      <stop offset="0.5" stop-color="#fde68a"/>
+      <stop offset="1" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.86"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.24"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" rx="140" fill="url(#bg)"/>
+  <circle cx="340" cy="320" r="240" fill="#fff" fill-opacity="0.12"/>
+  <rect x="410" y="240" width="380" height="760" rx="92" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.35"/>
+  <rect x="520" y="170" width="160" height="90" rx="34" fill="#111827"/>
+  <rect x="470" y="420" width="260" height="320" rx="60" fill="#111827" fill-opacity="0.06"/>
+  <text x="600" y="605" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="34" font-weight="800" fill="#111827" opacity="0.78">AMCHOOR</text>
+  <text x="600" y="650" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="18" fill="#111827" opacity="0.55">Powder</text>
+</svg>
+

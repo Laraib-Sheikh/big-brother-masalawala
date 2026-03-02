@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fde68a"/>
+      <stop offset="1" stop-color="#fbcfe8"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.22"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" rx="140" fill="url(#bg)"/>
+  <circle cx="860" cy="340" r="190" fill="#fff" fill-opacity="0.22"/>
+  <rect x="420" y="250" width="360" height="720" rx="88" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.45"/>
+  <rect x="520" y="180" width="160" height="84" rx="34" fill="#111827"/>
+  <rect x="470" y="420" width="260" height="320" rx="60" fill="#111827" fill-opacity="0.08"/>
+  <text x="450" y="575" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="30" font-weight="700" fill="#111827" opacity="0.78">MILLION</text>
+  <text x="480" y="615" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="18" fill="#111827" opacity="0.55">Gold For Her</text>
+</svg>
+

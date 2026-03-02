@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1400" viewBox="0 0 1000 1400" fill="none">
+  <defs>
+    <linearGradient id="dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fde68a"/>
+      <stop offset="1" stop-color="#fb923c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base -->
+  <rect x="40" y="40" width="920" height="1320" rx="64" fill="url(#dark)"/>
+
+  <!-- Accent stripe -->
+  <rect x="40" y="40" width="920" height="170" rx="64" fill="url(#accent)"/>
+  <rect x="40" y="150" width="920" height="60" fill="#000" fill-opacity="0.12"/>
+
+  <!-- Brand -->
+  <text x="100" y="135" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="34" font-weight="1000" fill="#111827">MASALAY WALA</text>
+  <text x="100" y="170" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="16" font-weight="900" fill="#111827" opacity="0.75">ORGANIC · CLEAN LABEL</text>
+  <text x="900" y="150" text-anchor="end" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="18" font-weight="900" fill="#111827">NET WT 200g</text>
+
+  <!-- Product title -->
+  <text x="500" y="360" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="78" font-weight="1100" fill="#f4f4f5">SPECIAL</text>
+  <text x="500" y="440" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="68" font-weight="1100" fill="#fde68a">BIRYANI</text>
+  <text x="500" y="492" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="30" font-weight="800" fill="#f4f4f5" opacity="0.8">MASALA</text>
+
+  <!-- Icon row -->
+  <g opacity="0.95">
+    <circle cx="320" cy="580" r="36" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="320" y="588" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="14" font-weight="900" fill="#fde68a">AROMA</text>
+    <circle cx="500" cy="580" r="36" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="500" y="588" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="14" font-weight="900" fill="#fde68a">TASTE</text>
+    <circle cx="680" cy="580" r="36" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="680" y="588" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="14" font-weight="900" fill="#fde68a">COLOR</text>
+  </g>
+
+  <!-- Ingredients box -->
+  <rect x="120" y="660" width="760" height="420" rx="48" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+  <text x="160" y="740" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="22" font-weight="900" fill="#f4f4f5">Ingredients</text>
+  <text x="160" y="780" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="18" fill="#f4f4f5" opacity="0.75">
+    Chili, coriander, cumin, cinnamon, cardamom, cloves&
+  </text>
+  <text x="160" y="860" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="22" font-weight="900" fill="#f4f4f5">Cooking tip</text>
+  <text x="160" y="900" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="18" fill="#f4f4f5" opacity="0.75">
+    Add 12 tbsp per kg rice (adjust to taste).
+  </text>
+
+  <!-- Footer -->
+  <text x="120" y="1208" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="16" font-weight="900" fill="#f4f4f5" opacity="0.8">Batch: MW-0001</text>
+  <text x="500" y="1208" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="16" font-weight="900" fill="#f4f4f5" opacity="0.8">MFG 2026-03 · EXP 2027-03</text>
+  <text x="880" y="1208" text-anchor="end" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto" font-size="16" font-weight="900" fill="#f4f4f5" opacity="0.8">info@masalaywala.com</text>
+</svg>
+
