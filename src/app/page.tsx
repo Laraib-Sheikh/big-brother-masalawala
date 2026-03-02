@@ -15,11 +15,11 @@ export default async function Home() {
   const products = await listProducts();
   return (
     <div>
-      <section className="border-b border-border bg-gradient-to-b from-muted/70 to-background">
+      <section className="border-b border-border bg-gradient-to-b from-brand-muted/50 via-amber-50/30 to-background dark:from-brand-muted/30 dark:via-amber-950/20 dark:to-background">
         <Container className="py-10 md:py-14">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-xs font-semibold text-muted-foreground">
+              <div className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-xs font-semibold text-amber-800 dark:border-amber-800 dark:bg-amber-950/50 dark:text-amber-200">
                 Trending Search{" "}
                 <span className="text-foreground">
                   Chinese Salt · Garam Masala · White Zeera
@@ -49,9 +49,9 @@ export default async function Home() {
             <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
               <Link
                 href="/products?tag=spices-powder"
-                className="group rounded-3xl border border-border bg-background p-5 hover:bg-muted"
+                className="group rounded-3xl border border-amber-200 bg-gradient-to-br from-amber-50 to-orange-50 p-5 hover:from-amber-100 hover:to-orange-100 dark:border-amber-800 dark:from-amber-950/40 dark:to-orange-950/30 dark:hover:from-amber-900/50 dark:hover:to-orange-900/40"
               >
-                <div className="text-xs font-semibold text-muted-foreground">
+                <div className="text-xs font-semibold text-amber-700 dark:text-amber-300">
                   Spices
                 </div>
                 <div className="mt-2 text-lg font-semibold">Spices Powder</div>
@@ -67,9 +67,9 @@ export default async function Home() {
               </Link>
               <Link
                 href="/products?tag=special-masalay"
-                className="group rounded-3xl border border-border bg-background p-5 hover:bg-muted"
+                className="group rounded-3xl border border-red-200 bg-gradient-to-br from-red-50 to-rose-50 p-5 hover:from-red-100 hover:to-rose-100 dark:border-red-900 dark:from-red-950/40 dark:to-rose-950/30 dark:hover:from-red-900/50 dark:hover:to-rose-900/40"
               >
-                <div className="text-xs font-semibold text-muted-foreground">
+                <div className="text-xs font-semibold text-red-700 dark:text-red-300">
                   Special
                 </div>
                 <div className="mt-2 text-lg font-semibold">Special Masalay</div>
@@ -85,9 +85,9 @@ export default async function Home() {
               </Link>
               <Link
                 href="/products?tag=seasoning"
-                className="group rounded-3xl border border-border bg-background p-5 hover:bg-muted"
+                className="group rounded-3xl border border-emerald-200 bg-gradient-to-br from-emerald-50 to-green-50 p-5 hover:from-emerald-100 hover:to-green-100 dark:border-emerald-800 dark:from-emerald-950/40 dark:to-green-950/30 dark:hover:from-emerald-900/50 dark:hover:to-green-900/40"
               >
-                <div className="text-xs font-semibold text-muted-foreground">
+                <div className="text-xs font-semibold text-emerald-700 dark:text-emerald-300">
                   Hot selling
                 </div>
                 <div className="mt-2 text-lg font-semibold">
@@ -115,7 +115,7 @@ export default async function Home() {
               <Link
                 key={c.title}
                 href={c.href}
-                className="group flex items-center gap-4 rounded-3xl border border-border bg-card p-5 hover:bg-muted"
+                className="group flex items-center gap-4 rounded-3xl border border-border bg-card p-5 shadow-sm hover:shadow-md hover:border-brand/20 transition-all"
               >
                 <div className="overflow-hidden rounded-2xl border border-border bg-muted">
                   <Image
@@ -139,7 +139,7 @@ export default async function Home() {
         </Container>
       </section>
 
-      <section id="best-sellers" className="border-t border-border py-12 md:py-16">
+      <section id="best-sellers" className="border-t border-border bg-gradient-to-b from-muted/50 to-background py-12 md:py-16">
         <Container>
           <div className="flex items-end justify-between gap-6">
             <div>
@@ -184,9 +184,9 @@ export default async function Home() {
 
       <section className="border-t border-border py-12 md:py-16">
         <Container>
-          <div className="grid gap-6 rounded-3xl border border-border bg-muted p-6 md:grid-cols-2 md:p-10">
+          <div className="grid gap-6 rounded-3xl border border-amber-200 bg-gradient-to-br from-amber-50 via-orange-50 to-brand-muted p-6 md:grid-cols-2 md:p-10 dark:border-amber-800 dark:from-amber-950/50 dark:via-orange-950/30 dark:to-brand-muted">
             <div>
-              <div className="text-sm font-semibold text-muted-foreground">
+              <div className="text-sm font-semibold text-brand">
                 Deal of the month
               </div>
               <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">
@@ -217,20 +217,20 @@ export default async function Home() {
           </div>
 
           <div className="mt-6 grid gap-4 md:grid-cols-3">
-            <div className="rounded-3xl border border-border bg-card p-6">
-              <div className="text-sm font-semibold">Free Shipping</div>
+            <div className="rounded-3xl border border-emerald-200 bg-card p-6 shadow-sm dark:border-emerald-800">
+              <div className="text-sm font-semibold text-emerald-700 dark:text-emerald-300">Free Shipping</div>
               <div className="mt-2 text-sm text-muted-foreground">
                 Enjoy free nationwide shipping on the purchase of Rs. 899/-.
               </div>
             </div>
-            <div className="rounded-3xl border border-border bg-card p-6">
-              <div className="text-sm font-semibold">Free Returns</div>
+            <div className="rounded-3xl border border-amber-200 bg-card p-6 shadow-sm dark:border-amber-800">
+              <div className="text-sm font-semibold text-amber-700 dark:text-amber-300">Free Returns</div>
               <div className="mt-2 text-sm text-muted-foreground">
                 Free returns within 30 days (items must be in undamaged condition).
               </div>
             </div>
-            <div className="rounded-3xl border border-border bg-card p-6">
-              <div className="text-sm font-semibold">Support Online</div>
+            <div className="rounded-3xl border border-brand/30 bg-card p-6 shadow-sm">
+              <div className="text-sm font-semibold text-brand">Support Online</div>
               <div className="mt-2 text-sm text-muted-foreground">
                 We support customers 24/7. Send WhatsApp and we’ll assist you
                 immediately.
@@ -255,7 +255,7 @@ export default async function Home() {
             {testimonials.map((t: (typeof testimonials)[number]) => (
               <div
                 key={t.name}
-                className="rounded-3xl border border-border bg-card p-6"
+                className="rounded-3xl border border-border bg-card p-6 shadow-sm hover:shadow-md hover:border-brand/20 transition-all"
               >
                 <p className="text-sm leading-6 text-muted-foreground">{t.quote}</p>
                 <div className="mt-5 text-sm font-semibold">{t.name}</div>
@@ -299,10 +299,10 @@ export default async function Home() {
             ))}
           </div>
 
-          <div className="mt-10 rounded-3xl border border-border bg-muted p-6 md:p-8">
+          <div className="mt-10 rounded-3xl border border-brand/20 bg-gradient-to-r from-brand-muted to-amber-50 p-6 md:p-8 dark:from-brand-muted dark:to-amber-950/30">
             <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
               <div>
-                <div className="text-sm font-semibold">Sign Up to Newsletter</div>
+                <div className="text-sm font-semibold text-brand">Sign Up to Newsletter</div>
                 <div className="mt-2 text-sm text-muted-foreground">
                   Sign up for 10% off your first purchase and updates on sales and offers.
                 </div>

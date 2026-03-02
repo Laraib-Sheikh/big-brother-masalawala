@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function SiteFooter() {
   return (
-    <footer id="contact" className="border-t border-border bg-background">
+    <footer id="contact" className="border-t border-border bg-gradient-to-b from-muted/60 to-background">
       <div className="mx-auto max-w-6xl px-4 py-12">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
@@ -21,7 +21,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <div className="text-sm font-semibold">Useful Links</div>
+            <div className="text-sm font-semibold text-brand">Useful Links</div>
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li>
                 <Link className="hover:text-foreground" href="/account">
@@ -47,7 +47,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <div className="text-sm font-semibold">Information</div>
+            <div className="text-sm font-semibold text-brand">Information</div>
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li>
                 <Link className="hover:text-foreground" href="/shipping">
@@ -73,7 +73,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <div className="text-sm font-semibold">Newsletter</div>
+            <div className="text-sm font-semibold text-brand">Newsletter</div>
             <p className="mt-3 text-sm text-muted-foreground">
               Subscribe to receive updates on new arrivals and promotions.
             </p>

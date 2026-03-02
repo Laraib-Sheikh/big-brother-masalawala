@@ -8,15 +8,15 @@ import { Input } from "@/components/ui/input";
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
-      <div className="hidden border-b border-border py-2 text-sm md:block">
+      <div className="hidden border-b border-border bg-gradient-to-r from-brand-muted/80 to-amber-50/50 py-2 text-sm md:block dark:from-brand-muted/50 dark:to-amber-950/30">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4">
           <div className="text-muted-foreground">
             Order Online · Call Us{" "}
-            <span className="text-foreground">+92-335-0563210</span>
+            <span className="font-semibold text-brand">+92-335-0563210</span>
           </div>
           <div className="flex items-center gap-5 text-muted-foreground">
             <span>Categories</span>
-            <span>info@masalaywala.com</span>
+            <span className="text-brand hover:underline">info@masalaywala.com</span>
           </div>
         </div>
       </div>
@@ -37,19 +37,19 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden items-center gap-6 pl-4 text-sm font-medium md:flex">
-          <Link href="/" className="hover:text-muted-foreground">
+          <Link href="/" className="hover:text-brand transition-colors">
             Home
           </Link>
-          <Link href="/products" className="hover:text-muted-foreground">
+          <Link href="/products" className="hover:text-brand transition-colors">
             Shop
           </Link>
-          <Link href="/#best-sellers" className="hover:text-muted-foreground">
+          <Link href="/#best-sellers" className="hover:text-brand transition-colors">
             Best Selling
           </Link>
-          <Link href="/#blog" className="hover:text-muted-foreground">
+          <Link href="/#blog" className="hover:text-brand transition-colors">
             Contact us
           </Link>
-          <Link href="/#contact" className="hover:text-muted-foreground">
+          <Link href="/#contact" className="hover:text-brand transition-colors">
             Newsletter
           </Link>
         </nav>

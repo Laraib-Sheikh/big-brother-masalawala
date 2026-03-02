@@ -36,36 +36,36 @@ export default async function ProductsPage({
 
         <div className="flex flex-wrap items-center gap-2 text-sm">
           <Link
-            className={`rounded-full border px-4 py-2 ${
-              !tag ? "bg-brand text-brand-foreground" : "hover:bg-muted"
+            className={`rounded-full border px-4 py-2 transition-colors ${
+              !tag ? "bg-brand text-brand-foreground border-brand" : "border-amber-200 hover:bg-amber-50 dark:border-amber-800 dark:hover:bg-amber-950/50"
             }`}
             href="/products"
           >
             All
           </Link>
           <Link
-            className={`rounded-full border px-4 py-2 ${
+            className={`rounded-full border px-4 py-2 transition-colors ${
               tag === "spices-powder"
-                ? "bg-brand text-brand-foreground"
-                : "hover:bg-muted"
+                ? "bg-brand text-brand-foreground border-brand"
+                : "border-amber-200 hover:bg-amber-50 dark:border-amber-800 dark:hover:bg-amber-950/50"
             }`}
             href="/products?tag=spices-powder"
           >
             Spices
           </Link>
           <Link
-            className={`rounded-full border px-4 py-2 ${
+            className={`rounded-full border px-4 py-2 transition-colors ${
               tag === "special-masalay"
-                ? "bg-brand text-brand-foreground"
-                : "hover:bg-muted"
+                ? "bg-brand text-brand-foreground border-brand"
+                : "border-amber-200 hover:bg-amber-50 dark:border-amber-800 dark:hover:bg-amber-950/50"
             }`}
             href="/products?tag=special-masalay"
           >
             Special Masalay
           </Link>
           <Link
-            className={`rounded-full border px-4 py-2 ${
-              tag === "seasoning" ? "bg-brand text-brand-foreground" : "hover:bg-muted"
+            className={`rounded-full border px-4 py-2 transition-colors ${
+              tag === "seasoning" ? "bg-brand text-brand-foreground border-brand" : "border-amber-200 hover:bg-amber-50 dark:border-amber-800 dark:hover:bg-amber-950/50"
             }`}
             href="/products?tag=seasoning"
           >

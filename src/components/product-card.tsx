@@ -7,7 +7,7 @@ import { AddToCartButton } from "@/components/shop/add-to-cart-button";
 
 export function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="group rounded-3xl border border-border bg-card p-3">
+    <div className="group rounded-3xl border border-border bg-card p-3 shadow-sm hover:shadow-md hover:border-brand/20 transition-all">
       <Link href={`/products/${product.slug}`} className="block">
         <div className="relative overflow-hidden rounded-2xl border border-border bg-muted">
           <Image
