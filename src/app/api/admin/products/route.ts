@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { Prisma } from "@prisma/client";
 import { requireAdmin } from "@/lib/admin-auth";
 import { createProduct } from "@/lib/products";
 import { slugify } from "@/lib/slug";
@@ -47,7 +46,7 @@ async function createWithUniqueSlug(input: Parameters<typeof createProduct>[0]) 
       return await createProduct({ ...input, slug: `${base}${suffix}` });
     } catch (e) {
       // Prisma unique constraint error is typically P2002
-      if (e instanceof Prisma.PrismaClientKnownRequestError && e.code === "P2002") {
+      if (e && typeof e === "object" && "code" in e && (e as { code: string }).code === "P2002") {
         continue;
       }
       throw e;
