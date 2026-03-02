@@ -14,9 +14,19 @@ function createPrisma(): PrismaClient {
   });
 }
 
-export const prisma: PrismaClient =
-  globalForPrisma.prisma ?? createPrisma();
-if (process.env.NODE_ENV !== "production") {
-  globalForPrisma.prisma = prisma;
+function getPrisma(): PrismaClient {
+  if (globalForPrisma.prisma) return globalForPrisma.prisma;
+  const client = createPrisma();
+  if (process.env.NODE_ENV !== "production") {
+    globalForPrisma.prisma = client;
+  }
+  return client;
 }
+
+/** Lazy-initialized so build can succeed without DATABASE_URL; client is created on first use. */
+export const prisma = new Proxy({} as PrismaClient, {
+  get(_, prop) {
+    return (getPrisma() as unknown as Record<string, unknown>)[prop as string];
+  },
+});
 
