@@ -175,7 +175,7 @@ export default async function Home() {
           </div>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {products.slice(0, 8).map((p) => (
+            {products.slice(0, 8).map((p: (typeof products)[number]) => (
               <ProductCard key={p.id} product={p} />
             ))}
           </div>
