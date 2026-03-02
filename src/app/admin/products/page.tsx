@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Product } from "@prisma/client";
 import { prisma } from "@/lib/db";
 import { formatMoney } from "@/lib/money";
 import { parseTags } from "@/lib/products";
@@ -36,7 +37,7 @@ export default async function AdminProductsPage() {
         </div>
 
         <div className="divide-y divide-border">
-          {products.map((p) => {
+          {products.map((p: Product) => {
             const tags = parseTags(p.tags).join(", ");
             return (
               <div
