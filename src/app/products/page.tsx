@@ -4,6 +4,8 @@ import { ProductCard } from "@/components/product-card";
 import { type ProductTag } from "@/lib/catalog";
 import { listProducts } from "@/lib/products";
 
+export const dynamic = "force-dynamic";
+
 export default async function ProductsPage({
   searchParams,
 }: {
