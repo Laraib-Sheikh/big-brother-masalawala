@@ -164,13 +164,15 @@ export function CartDrawer() {
                         Keep shopping
                       </ButtonLink>
                     </Dialog.Close>
-                    <Button
-                      variant="primary"
-                      className="flex-1"
-                      onClick={() => alert("Hook this up to checkout later (Stripe/Shopify).")}
-                    >
-                      Checkout
-                    </Button>
+                    <Dialog.Close asChild>
+                      <ButtonLink
+                        href="/checkout"
+                        variant="primary"
+                        className="flex-1"
+                      >
+                        Checkout
+                      </ButtonLink>
+                    </Dialog.Close>
                   </div>
                   <button
                     className="mt-3 w-full text-sm text-muted-foreground hover:text-foreground"

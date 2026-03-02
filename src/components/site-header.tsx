@@ -4,8 +4,11 @@ import { User } from "lucide-react";
 import { CartDrawer } from "@/components/cart/cart-drawer";
 import { MobileMenu } from "@/components/mobile-menu";
 import { Input } from "@/components/ui/input";
+import { getCustomerSessionFromCookies } from "@/lib/customer-auth";
 
-export function SiteHeader() {
+export async function SiteHeader() {
+  const customer = await getCustomerSessionFromCookies();
+
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur">
       <div className="hidden border-b border-border bg-gradient-to-r from-brand-muted/80 to-amber-50/50 py-2 text-sm md:block dark:from-brand-muted/50 dark:to-amber-950/30">
@@ -65,13 +68,23 @@ export function SiteHeader() {
         </div>
 
         <div className="ml-auto flex items-center gap-1 md:ml-0 md:gap-2">
-          <Link
-            href="/account"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-            aria-label="Account"
-          >
-            <User className="h-5 w-5" />
-          </Link>
+          {customer ? (
+            <Link
+              href="/account"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              aria-label="Account"
+            >
+              <User className="h-5 w-5" />
+            </Link>
+          ) : (
+            <Link
+              href="/login"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              aria-label="Sign in"
+            >
+              <User className="h-5 w-5" />
+            </Link>
+          )}
           <CartDrawer />
         </div>
       </div>

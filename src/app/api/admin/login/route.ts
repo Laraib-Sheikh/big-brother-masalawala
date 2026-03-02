@@ -13,12 +13,12 @@ export async function POST(req: Request) {
 
   if (!adminEmail || !adminPassword || !process.env.ADMIN_SESSION_SECRET) {
     return NextResponse.redirect(
-      new URL("/admin/login?error=missing_env", req.url),
+      new URL("/login?error=missing_env&next=" + encodeURIComponent(next), req.url),
     );
   }
 
   if (email !== adminEmail || password !== adminPassword) {
-    return NextResponse.redirect(new URL("/admin/login?error=invalid", req.url));
+    return NextResponse.redirect(new URL("/login?error=invalid&next=" + encodeURIComponent(next), req.url));
   }
 
   const token = await signAdminSession({ email, role: "admin" });

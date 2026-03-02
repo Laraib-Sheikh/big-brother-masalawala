@@ -15,10 +15,18 @@ function createPrisma(): PrismaClient {
 }
 
 function getPrisma(): PrismaClient {
-  if (globalForPrisma.prisma) return globalForPrisma.prisma;
-  const client = createPrisma();
-  if (process.env.NODE_ENV !== "production") {
-    globalForPrisma.prisma = client;
+  let client = globalForPrisma.prisma;
+  if (client != null) {
+    if (typeof (client as unknown as Record<string, unknown>).customer === "undefined") {
+      globalForPrisma.prisma = undefined;
+      client = undefined;
+    }
+  }
+  if (client == null) {
+    client = createPrisma();
+    if (process.env.NODE_ENV !== "production") {
+      globalForPrisma.prisma = client;
+    }
   }
   return client;
 }
@@ -26,7 +34,14 @@ function getPrisma(): PrismaClient {
 /** Lazy-initialized so build can succeed without DATABASE_URL; client is created on first use. */
 export const prisma = new Proxy({} as PrismaClient, {
   get(_, prop) {
-    return (getPrisma() as unknown as Record<string, unknown>)[prop as string];
+    const client = getPrisma() as unknown as Record<string, unknown>;
+    const value = client[prop as string];
+    if (prop === "customer" && value === undefined) {
+      throw new Error(
+        "Prisma client missing 'customer' model. Run: npx prisma generate. Then fully stop and restart your dev server (Ctrl+C, then npm run dev).",
+      );
+    }
+    return value;
   },
 });
 
