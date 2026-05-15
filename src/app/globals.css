@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #fefcf8;
   --foreground: #1c1917;
@@ -8,7 +10,6 @@
   --border: #e7e2d9;
   --card: #ffffff;
   --card-foreground: #1c1917;
-  /* Vibrant spice-market palette */
   --brand: #c2410c;
   --brand-foreground: #ffffff;
   --brand-muted: #fff7ed;
@@ -17,6 +18,24 @@
   --accent-amber: #d97706;
   --accent-coral: #e11d48;
   --ring: #c2410c;
+}
+
+.dark {
+  --background: #0c0a09;
+  --foreground: #fafaf9;
+  --muted: #1c1917;
+  --muted-foreground: #a8a29e;
+  --border: #292524;
+  --card: #171412;
+  --card-foreground: #fafaf9;
+  --brand: #ea580c;
+  --brand-foreground: #ffffff;
+  --brand-muted: #431407;
+  --accent: #22c55e;
+  --accent-foreground: #052e16;
+  --accent-amber: #f59e0b;
+  --accent-coral: #f43f5e;
+  --ring: #ea580c;
 }
 
 @theme inline {
@@ -37,26 +56,6 @@
   --color-ring: var(--ring);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0c0a09;
-    --foreground: #fafaf9;
-    --muted: #1c1917;
-    --muted-foreground: #a8a29e;
-    --border: #292524;
-    --card: #171412;
-    --card-foreground: #fafaf9;
-    --brand: #ea580c;
-    --brand-foreground: #ffffff;
-    --brand-muted: #431407;
-    --accent: #22c55e;
-    --accent-foreground: #052e16;
-    --accent-amber: #f59e0b;
-    --accent-coral: #f43f5e;
-    --ring: #ea580c;
-  }
 }
 
 body {
