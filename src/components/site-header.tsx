@@ -3,6 +3,7 @@ import Link from "next/link";
 import { User } from "lucide-react";
 import { CartDrawer } from "@/components/cart/cart-drawer";
 import { MobileMenu } from "@/components/mobile-menu";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Input } from "@/components/ui/input";
 import { getCustomerSessionFromCookies } from "@/lib/customer-auth";
 
@@ -69,6 +70,9 @@ export async function SiteHeader() {
         </div>
 
         <div className="ml-auto flex items-center gap-1 md:ml-0 md:gap-2">
+          <div className="hidden md:block">
+            <ThemeToggle />
+          </div>
           {customer ? (
             <Link
               href="/account"
