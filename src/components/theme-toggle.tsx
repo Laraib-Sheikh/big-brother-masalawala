@@ -1,34 +1,46 @@
 "use client";
 
-import { Moon, Sun } from "lucide-react";
+import * as React from "react";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { cn } from "@/lib/cn";
 
-export function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+type ThemeToggleProps = {
+  className?: string;
+};
 
-  useEffect(() => {
+export function ThemeToggle({ className }: ThemeToggleProps) {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
     setMounted(true);
   }, []);
 
-  const isDark = resolvedTheme === "dark";
+  if (!mounted) {
+    return (
+      <div
+        className={cn(
+          "h-10 w-[7.25rem] shrink-0 animate-pulse rounded-full bg-muted",
+          className,
+        )}
+        aria-hidden
+      />
+    );
+  }
 
   return (
-    <button
-      type="button"
-      onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground transition hover:bg-muted hover:text-foreground"
-      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      title={isDark ? "Light mode" : "Dark mode"}
-    >
-      {!mounted ? (
-        <span className="h-5 w-5" aria-hidden />
-      ) : isDark ? (
-        <Sun className="h-5 w-5" />
-      ) : (
-        <Moon className="h-5 w-5" />
+    <select
+      aria-label="Color theme"
+      value={theme ?? "system"}
+      onChange={(e) => setTheme(e.target.value)}
+      className={cn(
+        "h-10 max-w-full cursor-pointer rounded-full border border-border bg-background px-3 text-xs font-medium text-foreground outline-none hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+        className,
       )}
-    </button>
+    >
+      <option value="system">System</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
   );
 }

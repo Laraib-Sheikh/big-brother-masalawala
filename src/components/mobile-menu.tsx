@@ -5,6 +5,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/cn";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 function IconButton(props: React.ButtonHTMLAttributes<HTMLButtonElement>) {
   const { className, ...rest } = props;
@@ -65,6 +66,13 @@ export function MobileMenu() {
               ))}
             </ul>
           </nav>
+
+          <div className="mt-8 border-t border-border pt-6">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+              Appearance
+            </p>
+            <ThemeToggle className="w-full" />
+          </div>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
