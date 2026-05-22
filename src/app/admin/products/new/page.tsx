@@ -105,12 +105,12 @@ export default function AdminNewProductPage({
             <input
               className="mt-2 h-11 w-full rounded-2xl border border-border bg-background px-4 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               name="imageSrc"
-              placeholder="/products/your-product.svg"
+              placeholder="/products/your-product.png"
               required
             />
             <div className="mt-2 text-xs text-muted-foreground">
-              Must start with a leading slash. Example: `/products/your-product.svg`.
-              (If you type `categories/gift.svg`, use `/categories/gift.svg` instead.)
+              Must start with a leading slash. Example: `/products/your-product.png`.
+              Place image files in the `public/products/` folder.
             </div>
           </div>
 

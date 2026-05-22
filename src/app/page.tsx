@@ -57,7 +57,7 @@ export default async function Home() {
                 <div className="mt-2 text-lg font-semibold">Spices Powder</div>
                 <div className="mt-3 overflow-hidden rounded-2xl border border-border bg-muted">
                   <Image
-                    src="/hero/hero-1.svg"
+                    src="/products/image-6.png"
                     alt="Spices powder"
                     width={640}
                     height={480}
@@ -75,7 +75,7 @@ export default async function Home() {
                 <div className="mt-2 text-lg font-semibold">Special Masalay</div>
                 <div className="mt-3 overflow-hidden rounded-2xl border border-border bg-muted">
                   <Image
-                    src="/hero/hero-2.svg"
+                    src="/products/image-2.png"
                     alt="Special masalay"
                     width={640}
                     height={480}
@@ -95,7 +95,7 @@ export default async function Home() {
                 </div>
                 <div className="mt-3 overflow-hidden rounded-2xl border border-border bg-muted">
                   <Image
-                    src="/hero/hero-3.svg"
+                    src="/products/image-3.png"
                     alt="Seasonings"
                     width={640}
                     height={480}
@@ -207,7 +207,7 @@ export default async function Home() {
             </div>
             <div className="overflow-hidden rounded-3xl border border-border bg-background">
               <Image
-                src="/featured/featured.svg"
+                src="/products/image-8.png"
                 alt="Featured product"
                 width={900}
                 height={650}

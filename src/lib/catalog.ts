@@ -36,19 +36,19 @@ export const categories: Category[] = [
   {
     title: "Spices",
     href: "/products?tag=spices-whole",
-    imageSrc: "/categories/spices.svg",
+    imageSrc: "/products/image-7.png",
     count: 24,
   },
   {
     title: "Special Masalay",
     href: "/products?tag=special-masalay",
-    imageSrc: "/categories/special.svg",
+    imageSrc: "/products/image-8.png",
     count: 18,
   },
   {
     title: "Seasoning",
     href: "/products?tag=seasoning",
-    imageSrc: "/categories/seasoning.svg",
+    imageSrc: "/products/image-1.png",
     count: 12,
   },
 ];
